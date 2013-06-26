@@ -41,7 +41,7 @@ class Priority < ActiveRecord::Base
       p = Project.find_by_id(project_id)
       issues = p ? p.issues.to_a : []
       issues.each do |i|
-        i.update_column(:priority_id, calculate_issue_priority(i).id) if !i.closed?
+        i.update_column(:priority_id, calculate_issue_priority(i).id) if i.can_use_priority?
       end
     end
   end

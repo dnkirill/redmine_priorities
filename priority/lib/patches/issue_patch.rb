@@ -17,6 +17,10 @@ module Patches
 
     module InstanceMethods
 
+      def can_use_priority?
+        !closed? && field1.present?
+      end
+
       private
 
       def update_priority
