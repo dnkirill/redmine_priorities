@@ -1,5 +1,4 @@
-redmine_priorities
-==================
+= priority
 
 After install, please run migrations.
 rake redmine:plugins:migrate

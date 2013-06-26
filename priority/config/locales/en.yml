@@ -1,0 +1,16 @@
+en:
+  priority:
+    plugin_name: Priorities
+    field_names: Names priorities
+    select_priority_based_on_the_sum: Select priority based on the sum
+    weights: Weights
+  field_priority_enabled: Priority enabled
+  field_priority_field1: 'Priority #1'
+  field_priority_field2: 'Priority #2'
+  field_priority_field3: 'Priority #3'
+  field_priority_weight1: 'Weight #1'
+  field_priority_weight2: 'Weight #2'
+  field_priority_weight3: 'Weight #3'
+  field_field1: 'Priority #1'
+  field_field2: 'Priority #2'
+  field_field3: 'Priority #3'

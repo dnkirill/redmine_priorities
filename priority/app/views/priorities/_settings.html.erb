@@ -1,0 +1,86 @@
+<%- priority = Priority.find_by_project_id(@project.id) || Priority.new %>
+<%= form_for priority, url: project_priorities_path(@project), method: :put do |f| %>
+
+    <div class="box tabular settings">
+      <p>
+        <!--, 'Calculate priority via formula'-->
+        <%= f.label :priority_enabled %>
+        <%= f.check_box :enabled %>
+      </p>
+
+      <p><b><%= t('priority.field_names') %>:</b></p>
+
+      <p>
+        <%= f.label :priority_field1 %>
+        <%= f.text_field :field1 %>
+      </p>
+
+      <p>
+        <%= f.label :priority_field2 %>
+        <%= f.text_field :field2 %>
+      </p>
+
+      <p>
+        <%= f.label :priority_field3 %>
+        <%= f.text_field :field3 %>
+      </p>
+
+      <p><b><%= t('priority.weights') %>:</b></p>
+
+      <p>
+        <%= f.label :priority_weight1 %>
+        <%= f.number_field :weight1 %>
+      </p>
+
+      <p>
+        <%= f.label :priority_weight2 %>
+        <%= f.number_field :weight2 %>
+      </p>
+
+      <p>
+        <%= f.label :priority_weight3 %>
+        <%= f.number_field :weight3 %>
+      </p>
+
+      <p><b><%= t('priority.select_priority_based_on_the_sum') %>:</b></p>
+
+      <p><b><%= t('default_priority_normal')%>:</b></p>
+
+      <p>
+        <%= f.label :normal_min, 'Min' %>
+        <%= f.number_field :normal_min %>
+      </p>
+
+      <p>
+        <%= f.label :normal_max, 'Max' %>
+        <%= f.number_field :normal_max %>
+      </p>
+
+      <p><b><%= t('default_priority_high')%>:</b></p>
+
+      <p>
+        <%= f.label :high_min, 'Min' %>
+        <%= f.number_field :high_min %>
+      </p>
+
+      <p>
+        <%= f.label :high_max, 'Max' %>
+        <%= f.number_field :high_max %>
+      </p>
+
+      <p><b><%= t('default_priority_urgent')%>:</b></p>
+
+      <p>
+        <%= f.label :urgent_min, 'Min' %>
+        <%= f.number_field :urgent_min %>
+      </p>
+
+      <p>
+        <%= f.label :urgent_max, 'Max' %>
+        <%= f.number_field :urgent_max %>
+      </p>
+
+      <%= f.submit l(:button_save) %>
+    </div>
+
+<% end %>

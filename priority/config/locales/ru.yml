@@ -1,0 +1,16 @@
+ru:
+  priority:
+    plugin_name: Приоритеты
+    field_names: Названия приоритетов
+    select_priority_based_on_the_sum: Выберите пороги для вычисленной суммы
+    weights: Веса
+  field_priority_enabled: Приоритеты включены
+  field_priority_field1: 'Приоритет #1'
+  field_priority_field2: 'Приоритет #2'
+  field_priority_field3: 'Приоритет #3'
+  field_priority_weight1: 'Вес #1'
+  field_priority_weight2: 'Вес #2'
+  field_priority_weight3: 'Вес #3'
+  field_field1: 'Приоритет #1'
+  field_field2: 'Приоритет #2'
+  field_field3: 'Приоритет #3'
