@@ -12,7 +12,7 @@ class AddFieldsToPriorityAndIssue < ActiveRecord::Migration
     Priority.reset_column_information
     Issue.reset_column_information
 
-    Issue.update_all(field4: 0, field5: 0)
-    Priority.update_all(weight4: 0, weight5: 0)
+    Issue.update_all(:field4 => 0, :field5 => 0)
+    Priority.update_all(:weight4 => 0, :weight5 => 0)
   end
 end

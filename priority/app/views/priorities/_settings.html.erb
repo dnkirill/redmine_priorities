@@ -1,5 +1,5 @@
 <%- priority = Priority.find_by_project_id(@project.id) || Priority.new %>
-<%= form_for priority, url: project_priorities_path(@project), method: :put do |f| %>
+<%= form_for priority, :url => project_priorities_path(@project), :method => :put do |f| %>
 
     <div class="box tabular settings">
       <p>

@@ -11,7 +11,7 @@ class PrioritiesController < ApplicationController
       p.project_id = @project.id
       p.save
     end
-    redirect_to settings_project_path(@project, tab: 'priorities'), notice: 'Update success'
+    redirect_to settings_project_path(@project, :tab => 'priorities'), :notice => 'Update success'
   end
 
 end

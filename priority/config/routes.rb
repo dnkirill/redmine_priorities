@@ -1,3 +1,3 @@
 resources :projects do
-  resource :priorities, only: [:update]
+  resource :priorities, :only => [:update]
 end

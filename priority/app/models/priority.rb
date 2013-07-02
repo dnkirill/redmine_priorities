@@ -8,7 +8,7 @@ class Priority < ActiveRecord::Base
   has_one :project
 
   validates :weight1, :weight2, :weight3, :normal_min, :normal_max, :high_min, :high_max, :urgent_min, :urgent_max,
-            :project_id, presence: true, numericality: true
+            :project_id, :presence => true, :numericality => true
 
   validates_presence_of :field1, :field2, :field3
 

@@ -6,10 +6,10 @@ module Patches
         unloadable
         safe_attributes :field1, :field2, :field3
 
-        validates_numericality_of :field1, :field2, :field3, greater_than_or_equal_to: 1, less_than_or_equal_to: 9, if: :priority_enabled?
-        validates_presence_of :field1, :field2, :field3, if: :priority_enabled?
+        validates_numericality_of :field1, :field2, :field3, :greater_than_or_equal_to => 1, :less_than_or_equal_to => 9, :if => :priority_enabled?
+        validates_presence_of :field1, :field2, :field3, :if => :priority_enabled?
 
-        before_save :update_priority, if: :priority_enabled?
+        before_save :update_priority, :if => :priority_enabled?
 
         include InstanceMethods
       end

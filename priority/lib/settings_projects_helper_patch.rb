@@ -18,8 +18,8 @@ module SettingsProjectsHelperPatch
 
     def project_settings_tabs_with_hook
       tabs = project_settings_tabs_without_hook
-      tabs << {name: 'priorities', action: :manage_project_activities, partial: 'priorities/settings', label: 'priority.plugin_name'}
-      call_hook(:helper_projects_settings_tabs, {tabs: tabs})
+      tabs << {:name => 'priorities', :action => :manage_project_activities, :partial => 'priorities/settings', :label => 'priority.plugin_name'}
+      call_hook(:helper_projects_settings_tabs, {:tabs => tabs})
       tabs
     end
 

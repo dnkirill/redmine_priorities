@@ -12,8 +12,8 @@ Redmine::Plugin.register :priority do
   version '0.0.1'
   url 'http://progress-engine.ru/'
   author_url 'http://progress-engine.ru/'
-  requires_redmine version_or_higher: '2.0.3'
+  requires_redmine :version_or_higher => '2.0.3'
 
-  permission :priorities, { priorities: [:update] }, public: true
+  permission :priorities, { :priorities => [:update] }, :public => true
 end
 
