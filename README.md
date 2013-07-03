@@ -1,5 +1,7 @@
 redmine_priorities
 ==================
 
-After install, please run migrations.
-rake redmine:plugins:migrate
+Для установки плагина нужно:
+1) Cкопировать его в папку plugins каталога с redmine
+2) Запустить миграции для плагина с помощью команды - RAILS_ENV=production rake redmine:plugins:migrate
+3) Перезапустить сервер приложения redmine
